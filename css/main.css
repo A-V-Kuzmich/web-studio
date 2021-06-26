@@ -29,6 +29,7 @@ img {
 }
 
 .container {
+  width: 100vw;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -61,6 +62,7 @@ img {
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
 }
 
 img {
@@ -209,7 +211,7 @@ img {
 }
 
 .modal__order-service {
-  position: fixed;
+  position: relative;
   padding: 40px;
   background: var(--modal-order);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -364,38 +366,39 @@ img {
   line-height: 1.72;
 }
 
+.modal__form-container {
+  margin-left: 7px;
+}
+
 .modal__form-icon-checkbox {
-  display: inline-block;
+  display: block;
   vertical-align: middle;
   border: 1px solid #000000;
   width: 16px;
-  height: 15px;
-  margin-right: 7px;
+  height: 16px;
   border-radius: 2px;
-  box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   cursor: pointer;
   transition: background-color var(--time) var(--transition-bezier), border-color var(--time) var(--transition-bezier), box-shadow var(--time) var(--transition-bezier);
 }
 
-.modal__form-checkbox:checked + .modal__form-icon-checkbox {
+.modal__form-check:checked + .modal__form-icon-checkbox {
   background-color: var(--accent-color);
   border: none;
   box-shadow: none;
 }
 
-.modal__form-checkbox:focus + .modal__form-icon-checkbox {
+.modal__form-check:focus + .modal__form-icon-checkbox {
   border: 1px solid #000000;
   border-radius: 2px;
 }
 
-.modal__form-checkbox:focus:not(:checked) + .modal__form-icon-checkbox {
+.modal__form-check:focus:not(:checked) + .modal__form-icon-checkbox {
   border: 2px solid #000000;
   border-radius: 2px;
 }
 
 .modal__form-policy-link {
-  margin-left: 5px;
   color: var(--accent-color);
 }
 
@@ -456,6 +459,11 @@ img {
   .mobile-menu__container {
     position: relative;
     padding: 48px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
   }
   .mobile-menu__close-btn {
     position: absolute;
@@ -468,7 +476,7 @@ img {
   .mobile-menu__item {
     font-weight: 500;
     font-size: 40px;
-    line-height: 47px;
+    line-height: 1.17;
   }
   .mobile-menu__link {
     color: var(--second-color);
@@ -480,9 +488,9 @@ img {
   .mobile-menu__this-page {
     color: var(--accent-color);
   }
-  .mobile-menu__contact-link {
+  /*   .mobile-menu__contact-link {
     margin-top: 302px;
-  }
+  } */
   .mobile-menu__tel-link {
     color: var(--accent-color);
     font-weight: 500;
@@ -501,6 +509,7 @@ img {
   .mobile-menu__social-list {
     margin-top: 64px;
     display: flex;
+    flex-wrap: wrap;
   }
   .mobile-menu__social-link-item:not(:last-child)::after {
     content: '';
@@ -585,6 +594,7 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/mobile.webp");
+  max-width: 480px;
 }
 
 .hero__container {
@@ -606,19 +616,22 @@ img {
 }
 
 @media screen and (min-device-pixel-ratio: 2) and (max-width: 767px), (min-resolution: 192dpi) and (max-width: 767px), (min-resolution: 2dppx) and (max-width: 767px) {
-  .hader {
+  .hero {
+    max-width: 960px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/mobile@2x.webp");
   }
 }
 
 @media screen and (min-width: 768px) {
   .hero {
+    max-width: 768px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/tablet.webp");
   }
 }
 
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), (min-resolution: 192dpi) and (min-width: 768px), (min-resolution: 2dppx) and (min-width: 768px) {
-  .hader {
+  .hero {
+    max-width: 1536px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/tablet@2x.webp");
   }
 }
@@ -640,7 +653,8 @@ img {
 }
 
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), (min-resolution: 192dpi) and (min-width: 1200px), (min-resolution: 2dppx) and (min-width: 1200px) {
-  .hader {
+  .hero {
+    max-width: 3200px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/desktop@2x.webp");
   }
 }
@@ -1206,7 +1220,7 @@ address {
   }
 }
 
-@media screen and (max-width: 767px) and (min-width: 480px) {
+@media screen and (min-width: 480px) {
   .footer__form-input {
     width: 450px;
   }

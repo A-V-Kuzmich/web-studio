@@ -108,35 +108,37 @@
               </li>
             </ul>
           </nav>
-          <ul class="mobile-menu__contact-link list">
-            <li class="mobile-menu__contact-link-item">
-              <a class="mobile-menu__tel-link link" href="tel:+380961111111">
-                +38 096 111 11 11
-              </a>
-            </li>
-            <li class="mobile-menu__contact-link-item">
-              <a
-                class="mobile-menu__mail-link link"
-                href="mailto:info@devstudio.com"
-              >
-                info@devstudio.com
-              </a>
-            </li>
-          </ul>
-          <ul class="mobile-menu__social-list list">
-            <li class="mobile-menu__social-link-item">
-              <a class="mobile-menu__social-link link" href="#">Instagram</a>
-            </li>
-            <li class="mobile-menu__social-link-item">
-              <a class="mobile-menu__social-link link" href="#">Twitter</a>
-            </li>
-            <li class="mobile-menu__social-link-item">
-              <a class="mobile-menu__social-link link" href="#">Facebook</a>
-            </li>
-            <li class="mobile-menu__social-link-item">
-              <a class="mobile-menu__social-link link" href="#">LinkedIn</a>
-            </li>
-          </ul>
+          <div>
+            <ul class="mobile-menu__contact-link list">
+              <li class="mobile-menu__contact-link-item">
+                <a class="mobile-menu__tel-link link" href="tel:+380961111111">
+                  +38 096 111 11 11
+                </a>
+              </li>
+              <li class="mobile-menu__contact-link-item">
+                <a
+                  class="mobile-menu__mail-link link"
+                  href="mailto:info@devstudio.com"
+                >
+                  info@devstudio.com
+                </a>
+              </li>
+            </ul>
+            <ul class="mobile-menu__social-list list">
+              <li class="mobile-menu__social-link-item">
+                <a class="mobile-menu__social-link link" href="#">Instagram</a>
+              </li>
+              <li class="mobile-menu__social-link-item">
+                <a class="mobile-menu__social-link link" href="#">Twitter</a>
+              </li>
+              <li class="mobile-menu__social-link-item">
+                <a class="mobile-menu__social-link link" href="#">Facebook</a>
+              </li>
+              <li class="mobile-menu__social-link-item">
+                <a class="mobile-menu__social-link link" href="#">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
@@ -723,14 +725,17 @@
           <label class="modal__form-checkbox">
             <input
               type="checkbox"
-              class="modal-form-checkbox visually-hidden"
+              class="modal__form-check visually-hidden"
               name="user-polisy"
             />
             <svg class="modal__form-icon-checkbox">
               <use href="./images/icons.svg#icon-check"></use>
             </svg>
-            Соглашаюсь с рассылкой и принимаю
-            <a href="" class="modal__form-policy-link">Условия договора</a>
+            <div class="modal__form-container">
+              Соглашаюсь с рассылкой и принимаю
+
+              <a href="" class="modal__form-policy-link">Условия договора</a>
+            </div>
           </label>
 
           <button class="modal__form-submit-btn" type="submit">
