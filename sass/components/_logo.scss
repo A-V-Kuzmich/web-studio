@@ -1,0 +1,21 @@
+.logo {
+  font-family: var(--logo-font-family);
+  font-weight: bold;
+  color: var(--logo-color-begin);
+  font-size: 24px;
+  line-height: 1.16;
+
+  & > span {
+    color: var(--accent-color);
+  }
+}
+.f-logo {
+  color: var(--hero-text-color);
+  margin-right: 0;
+}
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.19;
+  }
+}

@@ -1,0 +1,34 @@
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .hader__container {
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+  .hader__menu-navigation {
+    margin-left: 88px;
+  }
+  .header__contact-list {
+    display: flex;
+    flex-direction: column;
+  }
+  .header__contact-link-item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  .header__mail-icon {
+    width: 14px;
+    height: 10px;
+  }
+  .header__phone-icon {
+    width: 10px;
+    height: 14px;
+  }
+  .hover-focus-icon {
+    fill: var(--text-contant-color);
+    margin-right: 8px;
+    transition: fill var(--time) var(--transition-bezier);
+
+    .header__contact-link:hover > &,
+    .header__contact-link:focus > & {
+      fill: var(--accent-color);
+    }
+  }
+}

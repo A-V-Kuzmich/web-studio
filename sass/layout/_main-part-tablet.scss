@@ -1,0 +1,51 @@
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  //------------our-features__section-----------------------
+  .our-features__section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .our-features__list {
+    display: flex;
+    flex-wrap: wrap;
+    & > li {
+      width: 354px;
+
+      &:nth-child(2n) {
+        margin-left: 30px;
+      }
+    }
+  }
+  .what-we-do__section {
+    display: none;
+  }
+
+  //------TEAM SECTION-----------
+  .team__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .team__card {
+    width: 354px;
+    margin-top: 30px;
+    &:nth-child(2n) {
+      margin-left: 30px;
+    }
+  }
+  .team__block-info {
+    padding: 30px 74px 24px 74px;
+  }
+  //--------CUSTOMERS---------------
+  .customers {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  //-----------------------------
+  .customers__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .customers__item {
+    width: 226px;
+  }
+}

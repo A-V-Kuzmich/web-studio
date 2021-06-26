@@ -1,0 +1,110 @@
+.portfolio__btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  color: var(--second-color);
+  cursor: pointer;
+  background: var(--portfolio-btn-color);
+  border-radius: 4px;
+  border-style: none;
+  padding: 6px 22px;
+  cursor: pointer;
+  transition: box-shadow var(--time) var(--transition-bezier),
+    background-color var(--time) var(--transition-bezier),
+    color var(--time) var(--transition-bezier);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: var(--btn-text-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+.portfolio__item-container {
+  position: relative;
+  overflow: hidden;
+}
+.portfolio__card-hover-tx {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  transform: translateY(100%);
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--portfolio-card-tx);
+  background-color: var(--portfolio-card-hover-card-color);
+  padding: 63px 24px;
+  overflow: auto;
+  transition: transform var(--time) var(--transition-bezier);
+
+  .portfolio__link:focus &,
+  .portfolio__link:hover & {
+    transform: translateY(0%);
+  }
+}
+.portfolio__title-work {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--second-color);
+  margin-bottom: 4px;
+}
+.portfolio__description {
+  font-size: 16px;
+  line-height: 1.87;
+  color: var(--text-contant-color);
+}
+.portfolio__link {
+  display: block;
+  transition: box-shadow var(--time) var(--transition-bezier);
+
+  &:focus,
+  &:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .portfolio__section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  /*----------btn----------------*/
+  .portfolio__filter-btn {
+    display: flex;
+    flex-wrap: wrap;
+
+    & > li {
+      margin-bottom: 15px;
+
+      &:not(:last-child) {
+        margin-right: 8px;
+      }
+    }
+  }
+  /*-------------------------------------*/
+  .portfolio__list-features-card {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 25px;
+  }
+  .portfolio__item {
+    width: 100%;
+    background: var(--header-background-color);
+    box-sizing: border-box;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  .portfolio__card-work {
+    padding: 20px 24px;
+    border-left: 1px solid var(--portfolio-card-color);
+    border-right: 1px solid var(--portfolio-card-color);
+    border-bottom: 1px solid var(--portfolio-card-color);
+  }
+}

@@ -1,0 +1,43 @@
+@media screen and (max-width: 767px) {
+  //------------our-features__section-----------------------
+  .our-features__section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .our-features__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    & > li:not(:first-child) {
+      margin-top: 30px;
+    }
+  }
+  .our-features__items {
+    text-align: center;
+  }
+  //------what-we-do-----------
+  .what-we-do__section {
+    display: none;
+  }
+
+  //------TEAM SECTION-----------
+  .team__card {
+    margin-top: 30px;
+    width: 450px;
+  }
+  .team__block-info {
+    padding: 30px 122px 24px 122px;
+  }
+
+  //--------CUSTOMERS---------------
+  .customers {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  //-----------------------------
+  .customers__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
