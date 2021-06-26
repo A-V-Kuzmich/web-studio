@@ -26,6 +26,8 @@
   cursor: pointer;
 }
 .modal__close-icon {
+  width: 30px;
+  height: 30px;
   transition: fill var(--time) var(--transition-bezier);
 
   .modal__close-btn:focus &,

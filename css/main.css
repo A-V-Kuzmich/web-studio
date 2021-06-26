@@ -63,6 +63,11 @@ img {
   margin-right: auto;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .header {
   background-color: var(--header-background-color);
   letter-spacing: 0.02em;
@@ -232,6 +237,8 @@ img {
 }
 
 .modal__close-icon {
+  width: 30px;
+  height: 30px;
   transition: fill var(--time) var(--transition-bezier);
 }
 
@@ -781,6 +788,13 @@ img {
   border-radius: 0px 0px 4px 4px;
 }
 
+.team__block-info {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  padding-bottom: 24px;
+}
+
 .team__name-dev {
   font-weight: 500;
   font-size: 16px;
@@ -823,24 +837,25 @@ img {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-.customers__item .customers__icon {
+.customers__icon {
   width: 106px;
   height: 60px;
   fill: var(--customers-icon-fill);
   transition: fill var(--time) var(--transition-bezier);
 }
 
-.customers__link:hover > .customers__item .customers__icon,
-.customers__link:focus > .customers__item .customers__icon {
+.customers__link:hover > .customers__icon,
+.customers__link:focus > .customers__icon {
   fill: var(--accent-color);
 }
 
+.customers__list {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
 @media screen and (max-width: 767px) {
-  img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-  }
   .our-features__section {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -859,21 +874,26 @@ img {
   .what-we-do__section {
     display: none;
   }
+}
+
+@media screen and (max-width: 767px) and (min-width: 480px) {
   .team__card {
-    margin-top: 30px;
     width: 450px;
-  }
-  .team__block-info {
-    padding: 30px 122px 24px 122px;
-  }
-  .customers {
-    padding-top: 60px;
-    padding-bottom: 60px;
   }
   .customers__list {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .team__card {
+    margin-top: 30px;
+  }
+  .customers {
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 }
 
@@ -905,9 +925,6 @@ img {
   }
   .team__card:nth-child(2n) {
     margin-left: 30px;
-  }
-  .team__block-info {
-    padding: 30px 74px 24px 74px;
   }
   .customers {
     padding-top: 60px;
@@ -987,9 +1004,6 @@ img {
   }
   .team__card:not(:first-child) {
     margin-left: 30px;
-  }
-  .team__block-info {
-    padding: 30px 32px 30px 32px;
   }
   .customers {
     padding-top: 94px;
