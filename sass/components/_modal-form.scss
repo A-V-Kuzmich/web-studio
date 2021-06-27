@@ -34,12 +34,9 @@
   padding-left: 42px;
   transition: border-color var(--time) var(--transition-bezier);
 
-  &:focus,
-  &:focus,
-  &:focus + .modal-form-icon {
+  &:focus {
     border-color: var(--accent-color);
     outline: none;
-    fill: var(--accent-color);
   }
 }
 .modal__form-icon {
@@ -51,6 +48,9 @@
   width: 18px;
   height: 18px;
   transition: fill var(--time) var(--transition-bezier);
+  .modal__form-input:focus + & {
+    fill: var(--accent-color);
+  }
 }
 
 .modal__form-text {
