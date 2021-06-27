@@ -10,7 +10,7 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url('../images/hero/mobile.webp');
+    url('../images/hero/mobile.jpg');
   max-width: 480px;
   &__container {
     padding-top: 118px;
@@ -23,12 +23,27 @@
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--hero-text-color);
-    width: 360px;
+
     margin-bottom: 30px;
     margin-right: auto;
     margin-left: auto;
   }
 }
+
+@media screen and (min-width: 480px) {
+  .hero__title {
+    width: 360px;
+  }
+  .hero {
+    max-width: 768px;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/hero/tablet.jpg');
+  }
+}
+
 @media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
   (min-resolution: 192dpi) and (max-width: 767px),
   (min-resolution: 2dppx) and (max-width: 767px) {
@@ -38,17 +53,17 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url('../images/hero/mobile@2x.webp');
+      url('../images/hero/mobile@2x.jpg');
   }
 }
 @media screen and (min-width: 768px) {
   .hero {
-    max-width: 768px;
+    max-width: 1600px;
     background-image: linear-gradient(
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url('../images/hero/tablet.webp');
+      url('../images/hero/desktop.jpg');
   }
 }
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
@@ -60,7 +75,7 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url('../images/hero/tablet@2x.webp');
+      url('../images/hero/tablet@2x.jpg');
   }
 }
 @media screen and (min-width: 1200px) {
@@ -73,14 +88,6 @@
     line-height: 1.36;
     width: 696px;
   }
-  .hero {
-    max-width: 1600px;
-    background-image: linear-gradient(
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)
-      ),
-      url('../images/hero/desktop.webp');
-  }
 }
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
   (min-resolution: 192dpi) and (min-width: 1200px),
@@ -91,6 +98,6 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url('../images/hero/desktop@2x.webp');
+      url('../images/hero/desktop@2x.jpg');
   }
 }

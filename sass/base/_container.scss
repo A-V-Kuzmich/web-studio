@@ -1,5 +1,4 @@
 .container {
-  width: 100vw;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -15,7 +14,6 @@
     width: 768px;
   }
 }
-
 @media screen and (min-width: 1200px) {
   .container {
     width: 1200px;
